@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd /home/lyrricc/containerlab/junos-lab
-mkdir -p configs backups sanitized
-
 mapfile -t containers < <(docker ps --filter "name=^/clab-junos-lab-" --format '{{.Names}}' | sort)
 
 if [ "${#containers[@]}" -eq 0 ]; then
