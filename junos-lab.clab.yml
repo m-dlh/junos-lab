@@ -12,8 +12,22 @@ topology:
       image: crpd:23.2R1.13
       startup-config: configs/core2.conf
 
+    core3:
+      kind: juniper_crpd
+      image: crpd:23.2R1.13
+      startup-config: configs/core3.conf
+
 
   links:
+
     - endpoints:
         - "core1:eth1"
         - "core2:eth1"
+
+    - endpoints:
+        - "core1:eth2"
+        - "core3:eth1"
+
+    - endpoints:
+        - "core2:eth2"
+        - "core3:eth2"

@@ -1,7 +1,9 @@
 set version 20230616.051920_builder.r1345402
 set system services ssh root-login allow
 set system services netconf ssh
-set interfaces eth1 unit 0 family inet address 10.0.0.1/30
+set interfaces eth1 unit 0 family inet address 10.0.0.1/28
+set interfaces eth2 unit 0 family inet address 10.0.0.4/28
 set interfaces lo0 unit 0 family inet address 10.255.255.1/32
-set protocols ospf area 0.0.0.0 interface eth1 interface-type p2p
+set protocols ospf area 0.0.0.0 interface eth1
 set protocols ospf area 0.0.0.0 interface lo0.0 passive
+set protocols ospf area 0.0.0.0 interface eth2

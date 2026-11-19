@@ -9,15 +9,30 @@
     {
       "id": "core1",
       "position": {
-        "x": 300,
-        "y": 340
+        "x": 80,
+        "y": -60
+      },
+      "geoCoordinates": {
+        "lat": 39.174453,
+        "lng": -86.500638
       }
     },
     {
       "id": "core2",
       "position": {
-        "x": 520,
-        "y": 340
+        "x": -40,
+        "y": 80
+      },
+      "geoCoordinates": {
+        "lat": 39.773852,
+        "lng": -86.16745
+      }
+    },
+    {
+      "id": "core3",
+      "position": {
+        "x": 220,
+        "y": 80
       }
     }
   ],
