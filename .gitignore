@@ -1,0 +1,13 @@
+# Containerlab runtime & generated artifacts
+clab-junos-lab/
+.clab*.yml.bak
+
+# Local build directory & container image tarballs
+crpd_clean/
+*.tgz
+*.tar
+*.tar.gz
+
+# Editor / OS clutter
+.DS_Store
+*.swp
