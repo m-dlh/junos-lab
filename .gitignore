@@ -16,3 +16,13 @@ crpd_extracted/
 # Local configuration files
 configs/
 backups/
+
+# Project-specific config files
+OSPF-3-Core-Project/configs
+OSPF-3-Core-Project/backups
+
+# Temp folder to store images
+temp/
+
+# VJunos test folder
+vjunos-test/

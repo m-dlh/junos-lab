@@ -9,8 +9,8 @@
     {
       "id": "core1",
       "position": {
-        "x": 80,
-        "y": -60
+        "x": -180,
+        "y": -240
       },
       "geoCoordinates": {
         "lat": 39.174453,
@@ -20,8 +20,8 @@
     {
       "id": "core2",
       "position": {
-        "x": -40,
-        "y": 80
+        "x": -280,
+        "y": -100
       },
       "geoCoordinates": {
         "lat": 39.773852,
@@ -31,8 +31,29 @@
     {
       "id": "core3",
       "position": {
+        "x": -100,
+        "y": -100
+      }
+    },
+    {
+      "id": "s2-core3",
+      "position": {
+        "x": 320,
+        "y": -100
+      }
+    },
+    {
+      "id": "s2-core2",
+      "position": {
+        "x": 120,
+        "y": -100
+      }
+    },
+    {
+      "id": "s2-core1",
+      "position": {
         "x": 220,
-        "y": 80
+        "y": -240
       }
     }
   ],
