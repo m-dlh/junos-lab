@@ -11,3 +11,4 @@ crpd_clean/
 # Editor / OS clutter
 .DS_Store
 *.swp
+crpd_extracted/
