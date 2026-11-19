@@ -12,3 +12,7 @@ crpd_clean/
 .DS_Store
 *.swp
 crpd_extracted/
+
+# Local configuration files
+configs/
+backups/

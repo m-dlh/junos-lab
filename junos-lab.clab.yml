@@ -12,5 +12,8 @@ topology:
       image: crpd:23.2R1.13
       startup-config: configs/core2.conf
 
+
   links:
-    - endpoints: ["core1:eth1", "core2:eth1"]
+    - endpoints:
+        - "core1:eth1"
+        - "core2:eth1"

@@ -2,7 +2,7 @@
 set -euo pipefail
 
 cd /home/lyrricc/containerlab/junos-lab
-mkdir -p configs backups
+mkdir -p configs backups sanitized
 
 mapfile -t containers < <(docker ps --filter "name=^/clab-junos-lab-" --format '{{.Names}}' | sort)
 
@@ -16,6 +16,9 @@ for container in "${containers[@]}"; do
   echo "Saving ${node} (${container})..."
   docker exec "$container" cli -c "show configuration" > "configs/${node}.conf"
   docker exec "$container" cli -c "show configuration | display set" > "backups/${node}.set"
+
+  grep -vE '^\s*encrypted-password\b' "configs/${node}.conf" > "sanitized_configs/${node}.conf"
+  grep -v 'set system root-authentication encrypted-password' "backups/${node}.set" > "sanitized_backups/${node}.set"
 done
 
-echo "Saved ${#containers[@]} node(s) to configs/*.conf and backups/*.set"
+echo "Saved ${#containers[@]} node(s) to configs/, backups/, sanitized_configs/, and sanitized_backups/."
